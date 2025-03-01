@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
+import Navbar from "./custom-components/ui/Navbar";
+import Circle from "./custom-components/ui/Circle";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const poppins = Poppins({
+  weight: ["400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
 });
 
@@ -25,9 +22,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${poppins.className} antialiased bg-black`}
       >
-        {children}
+        <div className="bg-white/5 relative backdrop-blur-sm min-h-screen text-white w-full">
+          <div className="relative z-10 bg-white/5 min-h-screen backdrop-blur-3xl">
+            <Navbar />
+            {children}
+          </div>
+          <div className="fixed w-full top-0 left-0 min-h-screen flex justify-between">
+            <Circle face="left" className="left-0 bg-opacity-50 -translate-x-[30%]  translate-y-[150%]" />
+            <Circle face="right" className="right-0 translate-x-[30%]  translate-y-[130%]" />
+          </div>
+        </div>
       </body>
     </html>
   );
