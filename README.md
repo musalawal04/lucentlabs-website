@@ -1,7 +1,5 @@
 # Lucent Labs - Web Development Agency
 
-![Lucent Labs Logo](https://github.com/LucentLabss/lucentlabss-web-app/raw/main/public/images/logo.png)
-
 ## About Lucent Labs
 
 Lucent Labs is a premier development agency specializing in both Web3 and Web2 technologies. We bridge the gap between traditional web applications and blockchain-based solutions, creating seamless digital experiences that leverage the best of both worlds.
