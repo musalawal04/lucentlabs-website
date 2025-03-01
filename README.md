@@ -16,7 +16,7 @@ This repository contains the codebase for the official Lucent Labs website, buil
 - **Language**: TypeScript
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Deployment**: [Vercel](https://vercel.com/)
-- **Font**: [Geist](https://vercel.com/font)
+- **Font**: [Poppins](https://vercel.com/font)
 
 ## Development
 
