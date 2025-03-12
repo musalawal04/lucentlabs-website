@@ -1,5 +1,3 @@
-import Circle from "../ui/Circle"
-
 export default function Stats() {
     const stats = [
         { value: "5M+", label: "Customer" },
@@ -9,7 +7,7 @@ export default function Stats() {
     ]
 
     return (
-        <section className="w-full min-h-full h-max py-24 lg:mt-20  bg-white/5 backdrop-blur-xl overflow-hidden">
+        <section className="w-full min-h-full h-max py-8 md:py-24 lg:mt-10 bg-white/5 backdrop-blur-xl overflow-hidden">
             <div className="relative container mx-auto px-4">
                 <div className="grid gap-8 grid-cols-2 md:grid-cols-4">
                     {stats.map((stat, index) => (

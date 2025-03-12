@@ -22,7 +22,7 @@ const Navbar = () => {
   ]
   return (
     <Wrapper className='lg:py-4 py-4 max-sm:px-2'>
-      <nav className='flex justify-between max-sm:bg-white/5 max-sm:rounded-full max-sm:py-3 max-sm:px-4 items-center'>
+      <nav className='flex justify-between  max-sm:sticky z-30 max-sm:bg-white/5 max-sm:rounded-full max-sm:py-3 max-sm:px-4 items-center'>
         <span className='text-[20px] gradient-text font-semibold'>LucentLabz</span>
         <ul className='lg:flex hidden flex-1 justify-center items-center gap-6'>
           {
@@ -41,7 +41,7 @@ const Navbar = () => {
                 <CgMenuGridR size={30} />
               </div>
             </SheetTrigger>
-            <SheetContent className='pt-20 max-md:flex hidden flex-col overflow-y-auto items-start'>
+            <SheetContent className='pt-20 max-md:flex hidden bg-black border border-gray-500 flex-col overflow-y-auto items-start'>
               <SheetTitle className='text-left text-2xl pb-4'>
                 <span className='text-[20px] gradient-text font-semibold'>LucentLabz</span>
               </SheetTitle>

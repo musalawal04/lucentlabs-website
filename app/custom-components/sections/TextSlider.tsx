@@ -47,7 +47,7 @@ const TextSlider: React.FC<SliderProps> = ({ className, sliderArray }: SliderPro
                     {sliderArray?.map((slider, index) => (
                         <div key={index} className='flex gap-3 text-white items-center w-[20%]'>
                             <StarFour size={26} className='text-orange-400' weight="fill" />
-                            <span className='overflow-x-hidden text-[24px]'>{slider}</span>
+                            <span className='overflow-x-hidden text-[20px] md:text-[24px]'>{slider}</span>
                         </div>
                     ))}
                 </ul>
@@ -57,7 +57,7 @@ const TextSlider: React.FC<SliderProps> = ({ className, sliderArray }: SliderPro
                     {sliderArray?.map((slider, index) => (
                         <div key={index} className='flex gap-3 text-white items-center w-[20%]'>
                             <StarFour size={26} className='text-orange-400' weight="fill" />
-                            <span className='overflow-x-hidden text-[24px]'>{slider}</span>
+                            <span className='overflow-x-hidden text-[20px] md:text-[24px]'>{slider}</span>
                         </div>
                     ))}
                 </ul>

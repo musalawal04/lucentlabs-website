@@ -1,6 +1,6 @@
 "use client"; 
 import Link from "next/link"
-import { Facebook, Twitter, Instagram, Youtube, X } from "lucide-react"
+import { Facebook, Instagram, Youtube} from "lucide-react"
 import Wrapper from "../ui/Wrapper"
 import { XLogo } from "@phosphor-icons/react"
 

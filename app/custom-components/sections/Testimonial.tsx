@@ -1,9 +1,7 @@
 "use client";
-import { ArrowUpRight, Check, Star } from 'lucide-react'
+import { Star } from 'lucide-react'
 import React from 'react'
 import Wrapper from '../ui/Wrapper'
-import Circle from '../ui/Circle'
-import CButton from '../ui/CButton'
 import { testimonial } from '@/app/dummy_data/testimonial'
 import Image from 'next/image'
 import { useSlider } from '@/app/hookes/useSlider';
@@ -17,7 +15,7 @@ const Testimonial = () => {
     return (
         <Wrapper className='flex relative flex-col min-h-full my-20 overflow-hidden items-center w-full'>
             {/* <Circle face="left" className="left-[100%] bottom- fixed -translate-x-1/2 opacity-50 bg-pink-600 blur-3xl translate-y-[150%]" /> */}
-            <h2 className={`lg:text-[70px] font-medium md:text-center text-left  mt-14 md:text-[50px] text-[40px] ${kanit.className}`}>Our happy Clients</h2>
+            <h2 className={`lg:text-[70px] font-medium md:text-center text-left  mt-14 md:text-[50px] text-[30px] ${kanit.className}`}>Our happy Clients</h2>
             <ul className='flex overflow-hidden gap-6 py-20 w-full'>
                 {
                     testimonial.concat(testimonial).map((item, index) => (
@@ -50,7 +48,7 @@ const Testimonial = () => {
             <div className='w-full flex justify-center pb-10 gap-2'>
                 {
                     testimonial.map((_, index) => (
-                        <span key={index} className={`${index % 2 === 0 ? "pl-4" : ""} w-8 h-1 rounded-xl inline-block mx-1 ${currentSlide === index ? 'cgradient' : 'bg-white/50'}`}></span>
+                        <span key={index} className={`${index % 2 === 0 ? "pl-4" : ""} md:w-8 md:h-1 w-2 h-2 rounded-full md:rounded-xl inline-block mx-1 ${currentSlide === index ? 'cgradient' : 'bg-white/50'}`}></span>
                     ))
                 }
             </div>
