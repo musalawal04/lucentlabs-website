@@ -1,18 +1,18 @@
 "use client";
 import React from "react"
 
-export const useSlider = ({ delay = 5000, loopTree }: { delay?: number, loopTree: any[] }) => {
+export const useSlider = ({ delay = 5000, loopTree }: { delay?: number, loopTree: unknown[] }) => {
     const [currentSlide, setCurrentSlide] = React.useState<number>(0)
 
     React.useEffect(() => {
-        if (currentSlide >= loopTree.length) {
-            setCurrentSlide(0)
-        } else {
-            setTimeout(() => {
-                setCurrentSlide(prev => prev + 1)
-            }, delay)
-        }
-    }, [currentSlide])
+        if (loopTree.length === 0) return; // Prevent running on empty array
+
+        const interval = setInterval(() => {
+            setCurrentSlide((prev) => (prev + 1) % loopTree.length);
+        }, delay);
+
+        return () => clearInterval(interval);
+    }, [currentSlide, delay, loopTree.length])
 
     return currentSlide;
 }

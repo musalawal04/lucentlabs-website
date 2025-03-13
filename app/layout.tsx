@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import {  Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./custom-components/ui/Navbar";
-import Circle from "./custom-components/ui/Circle";
 
 const poppins = Inter({
   weight: ["400", "500", "600", "700", "800", "900"],
