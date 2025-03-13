@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div>
             <Link href="/">
-              <span className='text-[20px] gradient-text font-semibold'>LucentLabz</span>
+              <span className='text-[20px] gradient-text font-semibold'>LucentLabss</span>
             </Link>
             <p className="text-gray-400 text-sm">
               We are a team of visual curators that seek consistently to deliver transactions that are digitally
