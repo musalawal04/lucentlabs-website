@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { GithubLogo, LinkedinLogo, XLogo } from "@phosphor-icons/react"
 import { Kanit } from "next/font/google"
 import Wrapper from "../ui/Wrapper"
+import Image from "next/image"
 
 const kanit = Kanit({ subsets: ["latin"], weight: ["600", "800", "900"], display: "swap" })
 
@@ -134,7 +135,7 @@ export default function TeamDisplay() {
             <Card className="overflow-hidden h-full border border-pink-500 bg-black shadow-xl hover:shadow-orange-500/10 transition-all duration-300">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent z-10" />
-                <img
+                <Image
                   src={member.imageUrl || "/placeholder.svg"}
                   alt={member.name}
                   className="w-full h-64 object-cover object-center"

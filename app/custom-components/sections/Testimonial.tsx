@@ -110,8 +110,6 @@ const Testimonial = () => {
     setCurrentSlide(index)
   }
 
-  // Calculate visible testimonials
-  const visibleTestimonials = [...testimonial, ...testimonial].slice(currentSlide, currentSlide + visibleSlides)
 
   return (
     <Wrapper className="flex relative flex-col min-h-full my-10 md:my-20 overflow-hidden items-center w-full px-4 md:px-6">

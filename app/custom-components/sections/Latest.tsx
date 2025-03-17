@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { Kanit } from "next/font/google"
 import { ArrowCircleDownRight, Fire } from "@phosphor-icons/react"
 import { motion } from "framer-motion"
@@ -14,22 +14,6 @@ const detail =
 const Latest = () => {
   const [showMore, setShowMore] = useState<boolean>(false)
   const [sliceIndx, setSliceIndx] = useState<number>(detail.length / 2 - 38)
-  const [isMobile, setIsMobile] = useState<boolean>(false)
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
-
-    // Initial check
-    checkMobile()
-
-    // Add event listener for window resize
-    window.addEventListener("resize", checkMobile)
-
-    // Cleanup
-    return () => window.removeEventListener("resize", checkMobile)
-  }, [])
 
   const handleToggleVisibility = () => {
     setShowMore(!showMore)
@@ -95,7 +79,7 @@ const Latest = () => {
           <h2 className={`lg:text-[70px] md:text-[50px] text-[40px] font-medium ${kanit.className}`}>
             Latest Happenings
           </h2>
-          <span className="text-[18px] md:text-[24px] text-center md:text-left lg:text-center">What we've been upto lately @LucentLabss</span>
+          <span className="text-[18px] md:text-[24px] text-center md:text-left lg:text-center">What we&apos;ve been upto lately @LucentLabss</span>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
