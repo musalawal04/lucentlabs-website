@@ -39,9 +39,9 @@ const Navbar = () => {
             <SheetTrigger className="lg:hidden flex">
               <div className='py-2 px-3 lg:hidden flex items-center gap-2 hover:bg-[#45355f]/20 border border-[#45355f] rounded-lg'>
                 <CgMenuGridR size={30} />
-              </div>
+              </div> 
             </SheetTrigger>
-            <SheetContent className='pt-20 max-md:flex hidden bg-black border border-gray-500 flex-col overflow-y-auto items-start'>
+            <SheetContent className='pt-20 flex lg:hidden bg-black border border-gray-500 flex-col overflow-y-auto items-start'>
               <SheetTitle className='text-left text-2xl pb-4'>
                 <span className='text-[20px] gradient-text font-semibold'>LucentLabz</span>
               </SheetTitle>

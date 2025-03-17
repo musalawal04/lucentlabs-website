@@ -1,13 +1,12 @@
 "use client"; 
 import Link from "next/link"
-import { Facebook, Instagram, Youtube} from "lucide-react"
 import Wrapper from "../ui/Wrapper"
-import { XLogo } from "@phosphor-icons/react"
+import { DiscordLogo, TelegramLogo, XLogo } from "@phosphor-icons/react"
 
 export default function Footer() {
   return (
-    <Wrapper className="bg-black/30 pt-20 pb-8">
-      <div className="container mx-auto px-4">
+    <Wrapper className="bg-black/30 pt-20 w-full pb-8">
+      <div className="w-full px-4">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div>
             <Link href="/">
@@ -49,16 +48,13 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex space-x-4">
               <Link href="#" className="text-gray-400 hover:text-white">
-                <Facebook className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-white">
                 <XLogo className="h-5 w-5" />
               </Link>
               <Link href="#" className="text-gray-400 hover:text-white">
-                <Instagram className="h-5 w-5" />
+                <DiscordLogo className="h-5 w-5" />
               </Link>
               <Link href="#" className="text-gray-400 hover:text-white">
-                <Youtube className="h-5 w-5" />
+                <TelegramLogo className="h-5 w-5" />
               </Link>
             </div>
           </div>

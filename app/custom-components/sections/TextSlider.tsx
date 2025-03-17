@@ -34,7 +34,7 @@ const TextSlider: React.FC<SliderProps> = ({ className, sliderArray }: SliderPro
     const duration = contentWidth / PIXELS_PER_SECOND;
 
     return (
-        <div className={`relative bg-white/10 backdrop-blur-xl overflow-hidden -rotate-3 p-2 py-4 rounded-lg my-2 ${className}`}>
+        <div className={`absolute lg:bottom-0 -bottom-16 bg-white/10 backdrop-blur-xl overflow-hidden min-w-full w-full -rotate-2 p-2 py-4 my-2 ${className}`}>
             <div
                 className="flex whitespace-nowrap gap-6 animate-scroll"
                 style={{
