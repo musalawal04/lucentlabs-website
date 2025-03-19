@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import Wrapper from "../ui/Wrapper"
 import Circle from "../ui/Circle"
+import Image from "next/image"
 
 export default function ContactSection() {
     const [selectedProjectTypes, setSelectedProjectTypes] = useState<string[]>([])
@@ -58,7 +59,7 @@ export default function ContactSection() {
                             <h1 className="text-5xl font-bold">
                                 Have a project?
                                 <br />
-                                Let's chat! <MessageCircle size={32} className="inline-block ml-2" />
+                                Let&apos;s chat! <MessageCircle size={32} className="inline-block ml-2" />
                             </h1>
                         </div>
 
@@ -125,7 +126,7 @@ export default function ContactSection() {
                     </div>
 
                     <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-6 mt-6 border border-white/10">
-                        <h2 className="text-3xl font-bold mb-4">Let's Talk:</h2>
+                        <h2 className="text-3xl font-bold mb-4">Let&apos;s Talk:</h2>
                         <div className="bg-[#222] backdrop-blur-lg rounded-full py-4 px-6 inline-block">
                             <p className="lg:text-xl md:text-md text-sm">customer-service@lucentlabss.com</p>
                         </div>
@@ -136,7 +137,7 @@ export default function ContactSection() {
                     <div className="bg-black/20 backdrop-blur-lg rounded-3xl p-8 border border-white/10 h-full flex flex-col items-center justify-center">
                         <div className="relative">
                             <div className="w-40 h-40 rounded-full overflow-hidden border-4 bg-gradient-to-br from-pink-500 to-orange-500 p-1">
-                                <img
+                                <Image
                                     src="/placeholder.svg?height=150&width=150"
                                     alt="Profile"
                                     className="w-full h-full rounded-full object-cover"

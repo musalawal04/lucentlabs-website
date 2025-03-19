@@ -1,5 +1,4 @@
 "use client"
-import { useState } from "react"
 import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -107,8 +106,6 @@ const teamMembers: TeamMember[] = [
 ]
 
 export default function TeamDisplay() {
-  const [activeId, setActiveId] = useState<number | null>(null)
-
   return (
     <Wrapper className="w-full px-4 py-16">
       <div className="text-center mb-16">
@@ -129,8 +126,6 @@ export default function TeamDisplay() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
             whileHover={{ y: -10 }}
-            onMouseEnter={() => setActiveId(member.id)}
-            onMouseLeave={() => setActiveId(null)}
           >
             <Card className="overflow-hidden h-full border border-pink-500 bg-black shadow-xl hover:shadow-orange-500/10 transition-all duration-300">
               <div className="relative">
