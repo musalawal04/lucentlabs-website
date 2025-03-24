@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import Wrapper from "../ui/Wrapper"
 import Circle from "../ui/Circle"
-import Image from "next/image"
+// import Image from "next/image"
 
 export default function ContactSection() {
     const [selectedProjectTypes, setSelectedProjectTypes] = useState<string[]>([])
@@ -137,11 +137,13 @@ export default function ContactSection() {
                     <div className="bg-black/20 backdrop-blur-lg rounded-3xl p-8 border border-white/10 h-full flex flex-col items-center justify-center">
                         <div className="relative">
                             <div className="w-40 h-40 rounded-full overflow-hidden border-4 bg-gradient-to-br from-pink-500 to-orange-500 p-1">
-                                <Image
+                                {/* <Image
                                     src="/placeholder.svg?height=150&width=150"
+                                    width={150}
+                                    height={150}
                                     alt="Profile"
                                     className="w-full h-full rounded-full object-cover"
-                                />
+                                /> */}
                             </div>
                             <div className="mt-6 text-center">
                                 <h2 className="text-3xl font-bold">LucentLabss</h2>

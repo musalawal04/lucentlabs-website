@@ -27,81 +27,68 @@ interface TeamMember {
 const teamMembers: TeamMember[] = [
   {
     id: 1,
-    name: "Alex Rivera",
-    role: "Founder & Lead Developer",
-    bio: "Blockchain enthusiast with 8+ years of experience in distributed systems and smart contract development.",
-    imageUrl: "/elly.jpeg?height=400&width=400",
+    name: "Lawal Musa",
+    role: "Founder",
+    bio: "Blockchain enthusiast, Web3 consultant, Backend Developer (Node Javascript) with years of experience in distributed systems and smart contract architecture development.",
+    imageUrl: "/boss-lawal.jpg?height=400&width=400",
     socialLinks: {
       twitter: "https://twitter.com",
       github: "https://github.com",
       linkedin: "https://linkedin.com",
     },
-    skills: ["Solidity", "Ethereum", "React", "Node.js"],
-  },
-  {
-    id: 2,
-    name: "Sophia Chen",
-    role: "Product Designer",
-    bio: "Creating intuitive interfaces for complex blockchain applications with a focus on user experience.",
-    imageUrl: "/elly.jpeg?height=400&width=400",
-    socialLinks: {
-      twitter: "https://twitter.com",
-      github: "https://github.com",
-      linkedin: "https://linkedin.com",
-    },
-    skills: ["UI/UX", "Design Systems", "Figma", "Web3 Design"],
-  },
-  {
-    id: 3,
-    name: "Marcus Johnson",
-    role: "Blockchain Architect",
-    bio: "Specialized in designing secure and scalable blockchain infrastructures for enterprise applications.",
-    imageUrl: "/elly.jpeg?height=400&width=400",
-    socialLinks: {
-      twitter: "https://twitter.com",
-      github: "https://github.com",
-      linkedin: "https://linkedin.com",
-    },
-    skills: ["Consensus Algorithms", "Layer 2", "Security", "Tokenomics"],
+    skills: ["Web3 consultancy", "Backend Developer"],
   },
   {
     id: 4,
-    name: "Elena Patel",
-    role: "Smart Contract Engineer",
-    bio: "Focused on developing secure, gas-efficient smart contracts and decentralized applications.",
+    name: "Mahadi Abuhuraira",
+    role: "Fullstack Developer, CTO",
+    bio: "Focused on developing secure Web2 and Web3-based solutions ensuring end-user satisfaction .",
+    imageUrl: "/mahadi.jpg?height=400&width=400",
+    socialLinks: {
+      twitter: "https://twitter.com",
+      github: "https://github.com",
+      linkedin: "https://linkedin.com",
+    },
+    skills: ["Mongo DB", "React JS", "Node", "Postgress", "Typescript"],
+  },
+  {
+    id: 2,
+    name: "Samir Idris",
+    role: "Aiken Smart Contract Developer, Fullstack developer",
+    bio: "Implementing business logic for complex blockchain applications with a focus on user experience.",
+    imageUrl: "/samir.jpg?height=400&width=400",
+    socialLinks: {
+      twitter: "https://twitter.com",
+      github: "https://github.com",
+      linkedin: "https://linkedin.com",
+    },
+    skills: ["Aiken", "Mongo", "Node JS", "React/Next JS", "Typescript"],
+  },
+  {
+    id: 3,
+    name: "Elliot Lucky",
+    role: "Compact Smart Contract Developer, MERN developer",
+    bio: "Specialized in creating secure and scalable blockchain infrastructures for enterprise applications.",
     imageUrl: "/elly.jpeg?height=400&width=400",
     socialLinks: {
       twitter: "https://twitter.com",
       github: "https://github.com",
       linkedin: "https://linkedin.com",
     },
-    skills: ["Solidity", "Auditing", "DeFi", "ERC Standards"],
+    skills: ["Compact", "Nodejs", "React/Next", "Mongo", "Typescript"],
   },
   {
     id: 5,
-    name: "David Kim",
-    role: "Frontend Developer",
-    bio: "Building beautiful, responsive interfaces that connect seamlessly with blockchain technologies.",
-    imageUrl: "/elly.jpeg?height=400&width=400",
+    name: "Jamilu Hassan Lega",
+    role: "UI/UX Designer",
+    bio: "Designing beautiful, responsive interfaces that enhances user experience.",
+    imageUrl: "/hassan.jpg?height=400&width=400",
     socialLinks: {
       twitter: "https://twitter.com",
       github: "https://github.com",
       linkedin: "https://linkedin.com",
     },
-    skills: ["React", "TypeScript", "Web3.js", "ethers.js"],
-  },
-  {
-    id: 6,
-    name: "Olivia Martinez",
-    role: "Community Manager",
-    bio: "Growing and nurturing our community across multiple platforms while driving user adoption.",
-    imageUrl: "/elly.jpeg?height=400&width=400",
-    socialLinks: {
-      twitter: "https://twitter.com",
-      github: "https://github.com",
-      linkedin: "https://linkedin.com",
-    },
-    skills: ["Community Building", "Content Strategy", "Discord", "Tokenomics"],
+    skills: ["Figma", "Adobe XD", "", "ethers.js"],
   },
 ]
 
@@ -133,6 +120,8 @@ export default function TeamDisplay() {
                 <Image
                   src={member.imageUrl || "/placeholder.svg"}
                   alt={member.name}
+                  width={200}
+                  height={200}
                   className="w-full h-64 object-cover object-center"
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-4 z-20">
