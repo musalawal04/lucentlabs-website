@@ -111,7 +111,7 @@ export default function ContactSection() {
                                     name="message"
                                     value={formData.message}
                                     onChange={handleInputChange}
-                                    placeholder="Tell me about your project..."
+                                    placeholder="Tell us about your project..."
                                     className="bg-black/30 border-white/10 min-h-[120px] rounded-xl"
                                     required
                                 />
@@ -128,7 +128,7 @@ export default function ContactSection() {
                     <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-6 mt-6 border border-white/10">
                         <h2 className="text-3xl font-bold mb-4">Let&apos;s Talk:</h2>
                         <div className="bg-[#222] backdrop-blur-lg rounded-full py-4 px-6 inline-block">
-                            <p className="lg:text-xl md:text-md text-sm">customer-service@lucentlabss.com</p>
+                            <p className="lg:text-xl md:text-md text-sm">lucentcodes@gmail.com</p>
                         </div>
                     </div>
                 </div>
@@ -146,7 +146,7 @@ export default function ContactSection() {
                                 /> */}
                             </div>
                             <div className="mt-6 text-center">
-                                <h2 className="text-3xl font-bold">LucentLabss</h2>
+                                <h2 className="text-3xl font-bold">LucentLabs</h2>
                                 <p className="text-xl text-gray-300">Customer service</p>
                             </div>
                         </div>

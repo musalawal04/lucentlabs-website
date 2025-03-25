@@ -2,6 +2,7 @@
 import Link from "next/link"
 import Wrapper from "../ui/Wrapper"
 import { DiscordLogo, TelegramLogo, XLogo } from "@phosphor-icons/react"
+import { MdEmail } from "react-icons/md";
 
 export default function Footer() {
   return (
@@ -10,7 +11,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div>
             <Link href="/">
-              <span className='text-[20px] gradient-text font-semibold'>LucentLabss</span>
+              <span className='text-[20px] gradient-text font-semibold'>LucentLabs</span>
             </Link>
             <p className="text-gray-400 text-sm">
               We are a team of visual curators that seek consistently to deliver transactions that are digitally
@@ -39,9 +40,7 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Contact Us</h3>
             <div className="space-y-2 text-gray-400">
-              <p>+91 7874126540</p>
-              <p>mohammadweb97@gmail.com</p>
-              <p>Rjn 15 Center, Romania 90018</p>
+              <p>lucentcodes@gmail.com</p>
             </div>
           </div>
 
@@ -55,6 +54,9 @@ export default function Footer() {
               </Link>
               <Link href="#" className="text-gray-400 hover:text-white">
                 <TelegramLogo className="h-5 w-5" />
+              </Link>
+              <Link href="lucentcodes@gmail.com" className="text-gray-400 hover:text-white">
+                <MdEmail className="h-5 w-5" />
               </Link>
             </div>
           </div>

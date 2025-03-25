@@ -10,7 +10,7 @@ import Image from "next/image"
 const kanit = Kanit({ subsets: ["latin"], weight: ["600", "800", "900"], display: "swap" })
 
 
-interface TeamMember {
+export interface TeamMember {
   id: number
   name: string
   role: string
@@ -24,7 +24,7 @@ interface TeamMember {
   skills: string[]
 }
 
-const teamMembers: TeamMember[] = [
+export const teamMembers: TeamMember[] = [
   {
     id: 1,
     name: "Lawal Musa",
@@ -36,10 +36,10 @@ const teamMembers: TeamMember[] = [
       github: "https://github.com",
       linkedin: "https://linkedin.com",
     },
-    skills: ["Web3 consultancy", "Backend Developer"],
+    skills: ["Web3 consultancy", "Node Js", "Mongo DB"],
   },
   {
-    id: 4,
+    id: 2,
     name: "Mahadi Abuhuraira",
     role: "Fullstack Developer, CTO",
     bio: "Focused on developing secure Web2 and Web3-based solutions ensuring end-user satisfaction .",
@@ -52,7 +52,7 @@ const teamMembers: TeamMember[] = [
     skills: ["Mongo DB", "React JS", "Node", "Postgress", "Typescript"],
   },
   {
-    id: 2,
+    id: 3,
     name: "Samir Idris",
     role: "Aiken Smart Contract Developer, Fullstack developer",
     bio: "Implementing business logic for complex blockchain applications with a focus on user experience.",
@@ -65,9 +65,9 @@ const teamMembers: TeamMember[] = [
     skills: ["Aiken", "Mongo", "Node JS", "React/Next JS", "Typescript"],
   },
   {
-    id: 3,
+    id: 4,
     name: "Elliot Lucky",
-    role: "Compact Smart Contract Developer, MERN developer",
+    role: "Compact Smart Contract Developer, Fullstack developer",
     bio: "Specialized in creating secure and scalable blockchain infrastructures for enterprise applications.",
     imageUrl: "/elly.jpeg?height=400&width=400",
     socialLinks: {
@@ -88,7 +88,7 @@ const teamMembers: TeamMember[] = [
       github: "https://github.com",
       linkedin: "https://linkedin.com",
     },
-    skills: ["Figma", "Adobe XD", "", "ethers.js"],
+    skills: ["Figma", "Adobe XD", "ethers.js"],
   },
 ]
 
@@ -104,7 +104,7 @@ export default function TeamDisplay() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {teamMembers.map((member) => (
           <motion.div
             key={member.id}

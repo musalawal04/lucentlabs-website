@@ -9,7 +9,7 @@ const poppins = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "LucentLabss",
+  title: "LucentLabs",
   description: "Web3 Development Agency",
 };
 

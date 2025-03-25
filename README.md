@@ -29,8 +29,8 @@ This repository contains the codebase for the official Lucent Labs website, buil
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/LucentLabss/lucentlabss-web-app.git
-   cd lucentlabss-web-app
+   git clone https://github.com/LucentLabs/LucentLabs-web-app.git
+   cd LucentLabs-web-app
    ```
 
 2. Install dependencies:
@@ -48,7 +48,7 @@ This repository contains the codebase for the official Lucent Labs website, buil
 ### Project Structure
 
 ```
-lucentlabss-web-app/
+LucentLabs-web-app/
 ├── app/                # Next.js App Router
 │   ├── custom-components/     # Shared components
 │   ├── api/            # API routes

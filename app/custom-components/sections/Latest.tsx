@@ -79,7 +79,7 @@ const Latest = () => {
           <h2 className={`lg:text-[70px] md:text-[50px] text-[40px] font-medium ${kanit.className}`}>
             Latest Happenings
           </h2>
-          <span className="text-[18px] md:text-[24px] text-center md:text-left lg:text-center">What we&apos;ve been upto lately @LucentLabss</span>
+          <span className="text-[18px] md:text-[24px] text-center md:text-left lg:text-center">What we&apos;ve been upto lately @LucentLabs</span>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

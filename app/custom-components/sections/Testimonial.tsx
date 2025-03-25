@@ -3,19 +3,23 @@
 import type React from "react"
 
 import { useEffect, useRef, useState } from "react"
-import { ChevronLeft, ChevronRight, Star } from "lucide-react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 import { testimonial } from "@/app/dummy_data/testimonial"
 import Image from "next/image"
 import { Kanit } from "next/font/google"
 import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 import Wrapper from "../ui/Wrapper"
+import { TeamMember, teamMembers } from "./Team"
+import { GithubLogo, LinkedinLogo, XLogo } from "@phosphor-icons/react"
+import { Card, CardContent } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 
 const kanit = Kanit({ subsets: ["latin"], weight: ["600", "800", "900"], display: "swap" })
 
-type TestimonialType = (typeof testimonial)[0]
+// type TestimonialType = (typeof testimonial)[0]
 
-const Testimonial = () => {
+const TeamMembers = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [touchStart, setTouchStart] = useState<number | null>(null)
   const [touchEnd, setTouchEnd] = useState<number | null>(null)
@@ -126,10 +130,10 @@ const Testimonial = () => {
           kanit.className,
         )}
       >
-        Our Happy Clients
+        Meet our Team
       </motion.h2>
 
-      {/* Testimonial slider container */}
+      {/* TeamMembers slider container */}
       <div className="relative w-full overflow-hidden">
         {/* Navigation buttons */}
         <div className="absolute top-1/2 left-0 -translate-y-1/2 z-10 flex justify-between w-full pointer-events-none px-2 md:px-4">
@@ -149,7 +153,7 @@ const Testimonial = () => {
           </button>
         </div>
 
-        {/* Testimonial cards */}
+        {/* TeamMembers cards */}
         <ul
           ref={sliderRef}
           className="flex gap-4 md:gap-6 py-10 md:py-16 w-full transition-all duration-500 ease-out"
@@ -162,8 +166,8 @@ const Testimonial = () => {
             transform: `translateX(-${currentSlide * (100 / visibleSlides)}%)`,
           }}
         >
-          {testimonial.concat(testimonial).map((item, index) => (
-            <TestimonialCard key={index} testimonial={item} visibleSlides={visibleSlides} />
+          {teamMembers.concat(teamMembers).map((item, index) => (
+            <TeamMembersCard key={index} testimonial={item} visibleSlides={visibleSlides} />
           ))}
         </ul>
       </div>
@@ -193,7 +197,7 @@ const Testimonial = () => {
 }
 
 // Separate TestimonialCard component for better organization
-const TestimonialCard = ({ testimonial, visibleSlides }: { testimonial: TestimonialType; visibleSlides: number }) => {
+const TeamMembersCard = ({ testimonial, visibleSlides }: { testimonial: TeamMember; visibleSlides: number }) => {
   return (
     <motion.li
       initial={{ opacity: 0, y: 20 }}
@@ -209,43 +213,78 @@ const TestimonialCard = ({ testimonial, visibleSlides }: { testimonial: Testimon
       }}
     >
       {/* Profile and reaction */}
-      <div className="flex gap-3 w-max self-center items-center bg-gradient-to-b from-transparent to-pink-100/20 -translate-y-[80%] p-2 rounded-full">
-        <div className="w-[50px] h-[50px] rounded-full flex justify-center items-center overflow-hidden border border-white/20">
+      <Card className="overflow-hidden h-full border border-pink-500 bg-black shadow-xl hover:shadow-orange-500/10 transition-all duration-300">
+        <div className="relative">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent z-10" />
           <Image
-            width={50}
-            height={50}
-            src={testimonial.image || "/placeholder.svg"}
+            src={testimonial.imageUrl || "/placeholder.svg"}
             alt={testimonial.name}
-            className="rounded-full w-full h-full object-cover"
+            width={200}
+            height={200}
+            className="w-full h-64 object-cover object-center"
           />
+          <div className="absolute bottom-0 left-0 right-0 p-4 z-20">
+            <h3 className="text-xl font-bold text-white">{testimonial.name}</h3>
+            <p className="text-sm bg-clip-text text-transparent cgradient-text">
+              {testimonial.role}
+            </p>
+          </div>
         </div>
-        <Image
-          width={40}
-          height={30}
-          className="w-12 h-12"
-          src={testimonial.rxn || "/placeholder.svg"}
-          alt={`${testimonial.name}'s reaction`}
-        />
-      </div>
+        <CardContent className="p-6 bg-gradient-to-b from-black to-black/95">
+          <p className="text-sm text-gray-300 mb-4">{testimonial.bio}</p>
 
-      {/* Star rating */}
-      <div className="flex gap-2 w-full">
-        {Array.from({ length: testimonial.stars }).map((_, i) => (
-          <Star key={i} className="h-5 w-5 fill-yellow-500 text-yellow-500" />
-        ))}
-      </div>
+          <div className="flex flex-wrap gap-2 mb-4">
+            {testimonial.skills.map((skill) => (
+              <Badge
+                key={skill}
+                variant="outline"
+                className="bg-black text-pink-400 border-pink-500/30 hover:bg-black/80"
+              >
+                {skill}
+              </Badge>
+            ))}
+          </div>
 
-      {/* Comment */}
-      <p className="text-gray-300 my-4 text-sm md:text-base leading-relaxed">{testimonial.comment}</p>
-
-      {/* Name and title */}
-      <div className="flex flex-col gap-1 mt-auto">
-        <h3 className="text-base md:text-lg font-medium">{testimonial.name}</h3>
-        <p className="text-xs md:text-sm text-gray-400">{testimonial.title}</p>
-      </div>
+          <div className="flex justify-start space-x-3 mt-4">
+            {testimonial.socialLinks.twitter && (
+              <a
+                href={testimonial.socialLinks.twitter}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-pink-500 transition-colors"
+              >
+                <XLogo size={18} weight="fill" />
+                <span className="sr-only">Twitter</span>
+              </a>
+            )}
+            {testimonial.socialLinks.github && (
+              <a
+                href={testimonial.socialLinks.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-pink-400 transition-colors"
+              >
+                <GithubLogo size={18} />
+                <span className="sr-only">GitHub</span>
+              </a>
+            )}
+            {testimonial.socialLinks.linkedin && (
+              <a
+                href={testimonial.socialLinks.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-pink-500 transition-colors"
+              >
+                <LinkedinLogo size={18} />
+                <span className="sr-only">LinkedIn</span>
+              </a>
+            )}
+          </div>
+        </CardContent>
+      </Card>
     </motion.li>
   )
 }
 
-export default Testimonial
+export default TeamMembers
 
