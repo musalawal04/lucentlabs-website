@@ -1,8 +1,9 @@
-import { ArrowUpRight, Check } from "lucide-react";
+import { Check } from "lucide-react";
+//import { ArrowUpRight } from "lucide-react";
 import React from "react";
 import Wrapper from "../ui/Wrapper";
 import Circle from "../ui/Circle";
-import CButton from "../ui/CButton";
+//import CButton from "../ui/CButton";
 import { Kanit } from "next/font/google";
 import Image from "next/image";
 

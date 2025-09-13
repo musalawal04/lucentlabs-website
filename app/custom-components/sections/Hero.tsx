@@ -3,8 +3,8 @@ import Circle from "../ui/Circle";
 import Image from "next/image";
 import { Kanit } from "next/font/google";
 import CButton from "../ui/CButton";
-import TextSlider from "./TextSlider";
-import { service } from "@/app/dummy_data/sliderArray";
+//import TextSlider from "./TextSlider";
+//import { service } from "@/app/dummy_data/sliderArray";
 import Wrapper from "../ui/Wrapper";
 
 const kanit = Kanit({

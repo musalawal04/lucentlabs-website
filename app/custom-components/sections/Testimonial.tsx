@@ -3,7 +3,7 @@
 import type React from "react";
 import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { testimonial } from "@/app/dummy_data/testimonial";
+//import { testimonial } from "@/app/dummy_data/testimonial";
 import Image from "next/image";
 import { Kanit } from "next/font/google";
 import { motion } from "framer-motion";
