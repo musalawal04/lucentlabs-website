@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Wrapper from "../ui/Wrapper";
-import { DiscordLogo, TelegramLogo, XLogo } from "@phosphor-icons/react";
+import { DiscordLogo, XLogo } from "@phosphor-icons/react";
 import { MdEmail } from "react-icons/md";
 
 export default function Footer() {

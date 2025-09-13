@@ -437,18 +437,18 @@ export const advisors: TeamMember[] = [
       "Strategic Planning",
     ],
   },
-  // {
-  //   id: 7,
-  //   name: "Prof. Martins",
-  //   role: "Technical Advisor",
-  //   bio: "Renowned for contributions to cryptographic protocols and smart contract security, guiding technical innovation.",
-  //   imageUrl: "/Martins.jpg?height=400&width=400",
-  //   socialLinks: {
-  //     github: "https://github.com/michaelchen",
-  //     linkedin: "https://linkedin.com/in/michaelchen",
-  //   },
-  //   skills: ["Cryptography", "Smart Contract Security", "Distributed Systems"],
-  // },
+  {
+    id: 7,
+    name: "Matteo Coppola",
+    role: "Technical Advisor",
+    bio: "Renowned for contributions to cryptographic protocols and smart contract security, guiding technical innovation.",
+    imageUrl: "/matcop.jpg?height=400&width=400",
+    socialLinks: {
+      github: "https://github.com/matcop",
+      linkedin: "https://x.com/matcop",
+    },
+    skills: ["Cryptography", "Smart Contract Security", "Distributed Systems"],
+  },
 ];
 
 export default function TeamDisplay() {
